@@ -1,0 +1,20 @@
+{
+  "name": "fe-practice",
+  "version": "1.0.0",
+  "description": "FE practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoXiaoluo/FE-Practise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoXiaoluo/FE-Practise/issues"
+  },
+  "homepage": "https://github.com/MoXiaoluo/FE-Practise#readme"
+}
