@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFC</title>
+    <style>
+      .container1 {
+        overflow: auto;
+      }
+      .box1 {
+        height: 100px;
+        width: 100px;
+        margin: 50px;
+        background-color: aquamarine;
+      }
+      .box2 {
+        height: 100px;
+        width: 100px;
+        margin: 50px;
+        background-color: aquamarine;
+      }
+      .container {
+        border: 1px solid red;
+        background-color: darkgoldenrod;
+        overflow: auto;
+      }
+      .item {
+        width: 100px;
+        height: 50px;
+        background-color: blueviolet;
+        border: 1px solid black;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <!--解决margin折叠问题，使用BFC-->
+    <div class="container1">
+      <div class="box1"></div>
+    </div>
+    <div class="box2"></div>
+    <!--使用BFC解决浮动塌陷问题, 绝对定位元素的高度塌陷问题无法用BFC解决-->
+    <div class="container">
+      <div class="item">111</div>
+      <div class="item">222</div>
+      <div class="item">333</div>
+      <div class="item">444</div>
+    </div>
+  </body>
+</html>

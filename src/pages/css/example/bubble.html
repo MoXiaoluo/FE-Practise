@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>three column</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px;
+      }
+
+      .box {
+        width: 150px;
+        height: 100px;
+        background-color: red;
+        color: white;
+        position: relative;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+      }
+
+      .box::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+      }
+
+      .box.bottom-arrow::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid red;
+        left: 22px;
+        top: -10px;
+      }
+
+      .box.right-arrow::after {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 12px solid red;
+        top: 22px;
+        left: -10px;
+      }
+
+      .box.left-arrow::after {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 12px solid red;
+        top: 22px;
+        right: -10px;
+      }
+
+      .box.top-arrow::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 12px solid red;
+        left: 22px;
+        bottom: -10px;
+      }
+      .triangle {
+        width: 0;
+        height: 0;
+        border: 100px solid;
+        border-color: orangered skyblue gold yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box top-arrow">Top</div>
+      <div class="box right-arrow">Right</div>
+      <div class="box bottom-arrow">Bottom</div>
+      <div class="box left-arrow">Left</div>
+    </div>
+    <div class="triangle"></div>
+  </body>
+</html>

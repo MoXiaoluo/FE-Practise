@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>three column</title>
+    <style>
+      .wrap {
+        display: grid;
+        grid-template-columns: 300px auto 300px;
+      }
+
+      .left,
+      .right,
+      .middle {
+        height: 100px;
+      }
+
+      .left {
+        background: coral;
+      }
+
+      .right {
+        background: lightblue;
+      }
+
+      .middle {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!--使用flex进行三栏布局-->
+    <div class="wrap">
+      <div class="left">左侧</div>
+      <div class="middle">中间</div>
+      <div class="right">右侧</div>
+    </div>
+  </body>
+</html>

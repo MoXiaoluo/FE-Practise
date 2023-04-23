@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display on center</title>
+  </head>
+  <style>
+    .parent {
+      height: 400px;
+      width: 400px;
+      position: relative;
+      background-color: aquamarine;
+      margin-bottom: 50px;
+    }
+    .parent .child {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: brown;
+    }
+    .parent .child1 {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -25px;
+      margin-top: -25px;
+      background-color: rosybrown;
+    }
+    .parent .child2 {
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: royalblue;
+    }
+    .parent1 {
+      height: 400px;
+      width: 400px;
+      background-color: chartreuse;
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .parent2 {
+      height: 400px;
+      width: 400px;
+      background-color: darkgoldenrod;
+      margin-bottom: 50px;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+    .parent1 .child,
+    .parent2 .child {
+      height: 50px;
+      width: 50px;
+      background-color: brown;
+    }
+  </style>
+  <body>
+    <!--使用绝对定位+margin:auto实现居中对齐-->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <!--使用绝对定位+margin负值实现居中对齐-->
+    <div class="parent">
+      <div class="child1"></div>
+    </div>
+    <!--使用绝对定位+transform实现居中对齐-->
+    <div class="parent">
+      <div class="child2"></div>
+    </div>
+    <!--使用flex实现居中对齐-->
+    <div class="parent1">
+      <div class="child"></div>
+    </div>
+    <!--使用grid实现居中对齐-->
+    <div class="parent2">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

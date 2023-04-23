@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>two column</title>
+    <style>
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: aquamarine;
+        position: relative;
+      }
+      .aside {
+        width: 200px;
+        height: 500px;
+        background-color: darkblue;
+      }
+      .main {
+        height: 100%;
+        background-color: coral;
+        position: absolute;
+        left: 200px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!--使用右边绝对定位实现左右两列布局-->
+    <div class="container">
+      <div class="aside">1</div>
+      <div class="main">2</div>
+    </div>
+  </body>
+</html>
